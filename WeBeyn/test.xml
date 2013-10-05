@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>WeBeyn</title>
+	<atom:link href="http://www.webeyn.com/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.webeyn.com</link>
+	<description>Bilgisayar, İnternet ve Teknoloji Haberleri</description>
+	<lastBuildDate>Sat, 05 Oct 2013 10:46:09 +0000</lastBuildDate>
+	<language>tr-TR</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.6.1</generator>
+		<item>
+		<title>Tim Cook&#8217;tan Çalışanlara Steve Jobs Mesajı</title>
+		<link>http://www.webeyn.com/tim-cooktan-calisanlara-steve-jobs-mesaji/</link>
+		<comments>http://www.webeyn.com/tim-cooktan-calisanlara-steve-jobs-mesaji/#comments</comments>
+		<pubDate>Sat, 05 Oct 2013 10:12:53 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Diğer]]></category>
+		<category><![CDATA[Apple]]></category>
+		<category><![CDATA[Steve Jobs]]></category>
+		<category><![CDATA[Tim Cook]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8183</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/Steve-Jobs-webeyn.jpg" class="attachment-post-thumbnail wp-post-image" alt="Steve-Jobs-webeyn" /></div>Apple'ın hayata veda eden kurucusu Steve Jobs'un ölümünün ikinci yıl dönümünde Tim Cook, şirket çalışanlarına bir mesaj gönderdi.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/tim-cooktan-calisanlara-steve-jobs-mesaji/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>App Store’da Haftanın Uygulaması: Stop Motion Studio</title>
+		<link>http://www.webeyn.com/app-storeda-haftanin-uygulamasi-stop-motion-studio/</link>
+		<comments>http://www.webeyn.com/app-storeda-haftanin-uygulamasi-stop-motion-studio/#comments</comments>
+		<pubDate>Sat, 05 Oct 2013 09:22:52 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Mobil Dünya]]></category>
+		<category><![CDATA[App Store]]></category>
+		<category><![CDATA[Haftanın uygulaması]]></category>
+		<category><![CDATA[Stop Motion Studio]]></category>
+		<category><![CDATA[Stop Motion Studio for iPhone]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8179</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/App-Store-logo-webeyn.jpg" class="attachment-post-thumbnail wp-post-image" alt="App-Store-logo-webeyn" /></div>iOS platformu için 'Stop Motion Studio', Apple’ın uygulama mağazası App Store‘da bu haftanın ücretsiz uygulaması oldu.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/app-storeda-haftanin-uygulamasi-stop-motion-studio/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Instagram&#8217;da Reklam Yayını Başlıyor!</title>
+		<link>http://www.webeyn.com/instagramda-reklam-yayini-basliyor/</link>
+		<comments>http://www.webeyn.com/instagramda-reklam-yayini-basliyor/#comments</comments>
+		<pubDate>Fri, 04 Oct 2013 16:06:20 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Sosyal Ağlar]]></category>
+		<category><![CDATA[Instagram reklam]]></category>
+		<category><![CDATA[Instagram reklamları]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8178</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/Instagram-logo-webeyn1.jpg" class="attachment-post-thumbnail wp-post-image" alt="Instagram-logo-webeyn" /></div>Bir süredir reklam yayını hazırlığında olan Instagram, iki ay içerisinde reklam yayınlamaya başlayacağını duyurdu.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/instagramda-reklam-yayini-basliyor/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Android 4.4 KitKat&#8217;ın Yeni Ekran Görüntüleri Sızdırıldı</title>
+		<link>http://www.webeyn.com/android-4-4-kitkatin-yeni-ekran-goruntuleri-sizdirildi/</link>
+		<comments>http://www.webeyn.com/android-4-4-kitkatin-yeni-ekran-goruntuleri-sizdirildi/#comments</comments>
+		<pubDate>Fri, 04 Oct 2013 15:28:07 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Mobil Dünya]]></category>
+		<category><![CDATA[Android 4.4 çıkış tarihi]]></category>
+		<category><![CDATA[Android 4.4 KitKat özellikleri]]></category>
+		<category><![CDATA[Android 4.4 resimleri]]></category>
+		<category><![CDATA[Gadget Helpline]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8177</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/Android-Kit-Kat-webeyn.jpg" class="attachment-post-thumbnail wp-post-image" alt="Android-Kit-Kat-webeyn" /></div>Android işletim sisteminin en yeni versiyonu olacak olan Android 4.4 KitKat'a ait yeni ekran görüntüleri sızdırıldı.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/android-4-4-kitkatin-yeni-ekran-goruntuleri-sizdirildi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Fiber Teknolojinin Geleceği İstanbul&#8217;da Tartışılacak</title>
+		<link>http://www.webeyn.com/fiber-teknolojinin-gelecegi-istanbulda-tartisilacak/</link>
+		<comments>http://www.webeyn.com/fiber-teknolojinin-gelecegi-istanbulda-tartisilacak/#comments</comments>
+		<pubDate>Fri, 04 Oct 2013 11:58:34 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[İnternet ve Teknoloji]]></category>
+		<category><![CDATA[FTTH Forum]]></category>
+		<category><![CDATA[FTTH Forum tarihler]]></category>
+		<category><![CDATA[Hansecom]]></category>
+		<category><![CDATA[Hassan Claussen]]></category>
+		<category><![CDATA[Murat Erkan]]></category>
+		<category><![CDATA[Turkcell Superonline]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8175</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/FTTH-Forum-webeyn.jpg" class="attachment-post-thumbnail wp-post-image" alt="FTTH-Forum-webeyn" /></div>Fiber teknolojinin geleceği Turkcell Superonline’nın katkılarıyla bir kez daha İstanbul’da tartışılacak.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/fiber-teknolojinin-gelecegi-istanbulda-tartisilacak/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Türkiye&#8217;ye Gelen LINE&#8217;ın Kullanıcı Sayısı Arttı</title>
+		<link>http://www.webeyn.com/turkiyeye-gelen-linein-kullanici-sayisi-artti/</link>
+		<comments>http://www.webeyn.com/turkiyeye-gelen-linein-kullanici-sayisi-artti/#comments</comments>
+		<pubDate>Fri, 04 Oct 2013 11:14:56 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Mobil Dünya]]></category>
+		<category><![CDATA[LINE istatistikleri]]></category>
+		<category><![CDATA[LINE kullanıcı sayısı]]></category>
+		<category><![CDATA[LINE Türkiye]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8172</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/LINE-logo-yeni-webeyn.jpg" class="attachment-post-thumbnail wp-post-image" alt="LINE-logo-yeni-webeyn" /></div>Ücretsiz mobil mesajlaşma uygulamalarından olan LINE, Türkiye pazarına hızlı girdi. Temmuz ayından beri Türkiye’deki kullanıcı sayısını dört kat artıran LINE, uygulamalarına son olarak ücretsiz görüntülü arama seçeneğini ekledi.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/turkiyeye-gelen-linein-kullanici-sayisi-artti/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>HTC One Mini Avea&#8217;da</title>
+		<link>http://www.webeyn.com/htc-one-mini-aveada/</link>
+		<comments>http://www.webeyn.com/htc-one-mini-aveada/#comments</comments>
+		<pubDate>Fri, 04 Oct 2013 09:50:09 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Mobil Dünya]]></category>
+		<category><![CDATA[HTC One Mini]]></category>
+		<category><![CDATA[One Mini Avea]]></category>
+		<category><![CDATA[One Mini Avea fiyatı]]></category>
+		<category><![CDATA[One Mini kampanyaları]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8171</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/HTC-One-Mini-webeyn-buyuk.jpg" class="attachment-post-thumbnail wp-post-image" alt="HTC-One-Mini-webeyn-buyuk" /></div>HTC’nin yenilikçi tasarımı ve  üstün özellikleriyle dikkat çeken ürünü HTC One Mini, Avea İletişim Merkezleri’nde cazip fiyat avantajlarıyla teknoloji tutkunlarını bekliyor.  ]]></description>
+		<wfw:commentRss>http://www.webeyn.com/htc-one-mini-aveada/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Merak Edenler 4G&#8217;yi Turkcell&#8217;de Test Edebilecek</title>
+		<link>http://www.webeyn.com/merak-edenler-4gyi-turkcellde-test-edebilecek/</link>
+		<comments>http://www.webeyn.com/merak-edenler-4gyi-turkcellde-test-edebilecek/#comments</comments>
+		<pubDate>Fri, 04 Oct 2013 08:38:20 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Mobil Dünya]]></category>
+		<category><![CDATA[4G internet testi]]></category>
+		<category><![CDATA[Turkcell 4G testi]]></category>
+		<category><![CDATA[Turkcell Pera Flagship]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8169</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/Turkcell_logo_webeyn_buyuk_YENI.jpg" class="attachment-post-thumbnail wp-post-image" alt="Turkcell_logo_webeyn_buyuk_YENI" /></div>Turkcell tüm teknoloji meraklılarına 300 Mbps’e varan mobil internet hızını deneyimleme fırsatı sunuyor.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/merak-edenler-4gyi-turkcellde-test-edebilecek/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Assassin’s Creed 4&#8242;ün PC Sistem Gereksinimleri Belli Oldu</title>
+		<link>http://www.webeyn.com/assassins-creed-4-black-flag-sistem-gereksinimleri/</link>
+		<comments>http://www.webeyn.com/assassins-creed-4-black-flag-sistem-gereksinimleri/#comments</comments>
+		<pubDate>Thu, 03 Oct 2013 19:35:40 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Oyun Dünyası]]></category>
+		<category><![CDATA[Assassin’s Creed 4 sistem gereksinimleri]]></category>
+		<category><![CDATA[Ubisoft]]></category>
+		<category><![CDATA[Watch Dogs]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8168</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/Assassins-Creed-webeyn-buyuk.jpg" class="attachment-post-thumbnail wp-post-image" alt="Assassins-Creed-webeyn-buyuk" /></div>Ubisoft'un merakla beklenen oyunu Assassin's Creed 4: Blag Flag'in PC versiyonunun sistem gereksinimleri belli oldu.]]></description>
+		<wfw:commentRss>http://www.webeyn.com/assassins-creed-4-black-flag-sistem-gereksinimleri/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Vodafone Grubu’nda Görev Değişikliği</title>
+		<link>http://www.webeyn.com/vodafone-grubunda-gorev-degisikligi/</link>
+		<comments>http://www.webeyn.com/vodafone-grubunda-gorev-degisikligi/#comments</comments>
+		<pubDate>Thu, 03 Oct 2013 14:08:13 +0000</pubDate>
+		<dc:creator>Atakan Uslu</dc:creator>
+				<category><![CDATA[Diğer]]></category>
+		<category><![CDATA[Gökhan Öğüt]]></category>
+		<category><![CDATA[Serpil Timuray]]></category>
+
+		<guid isPermaLink="false">http://www.webeyn.com/?p=8165</guid>
+		<description><![CDATA[<div><img width="798" height="350" src="http://www.webeyn.com/wp-content/uploads/Vodafone-logo-webeyn-buyuk.jpg" class="attachment-post-thumbnail wp-post-image" alt="Vodafone-logo-webeyn-buyuk" /></div>1 Ocak 2009 tarihinden bu yana Vodafone Türkiye İcra Kurulu Başkanı olarak görev yapan Serpil Timuray, 1 Ocak 2014 itibariyle Vodafone Grubu İcra Kurulu Üyesi ve Afrika, Orta Doğu ve Asya Pasifik (AMAP) Bölge Başkanı olarak atandı. ]]></description>
+		<wfw:commentRss>http://www.webeyn.com/vodafone-grubunda-gorev-degisikligi/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
