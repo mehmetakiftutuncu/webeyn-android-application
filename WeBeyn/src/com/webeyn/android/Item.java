@@ -3,7 +3,6 @@ package com.webeyn.android;
 import java.util.ArrayList;
 import java.util.Date;
 
-
 /**
  * Represents a feed item which is a post on WeBeyn
  * 
@@ -195,7 +194,7 @@ public class Item
 	@Override
 	public String toString()
 	{
-		return String.format("Item [title=%s, summary=%s, link=%s, publishDate=%s, creator=%s, categories=%s, numberOfComments=%s]",
+		return String.format("Item[\ntitle=%s\nsummary=%s\nlink=%s\npublishDate=%s\ncreator=%s\ncategories=%s\nnumberOfComments=%s\n]",
 						title, summary, link, publishDate, creator, categories, numberOfComments);
 	}	
 }

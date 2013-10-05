@@ -25,7 +25,7 @@ public class WeBeynParser
 	/** Root tag in RSS feed */
 	public static final String TAG_RSS = "rss";
 	/** Tag in RSS feed containing {@link Item} definitions */
-	public static final String TAG_CHANNEL = "item";
+	public static final String TAG_CHANNEL = "channel";
 	/** Tag in RSS feed corresponding to {@link Item} */
 	public static final String TAG_ITEM = "item";
 	/** Format to parse the publish date from RSS feed */
@@ -128,7 +128,7 @@ public class WeBeynParser
 					// Get the name of the tag
 					String name = parser.getName();
 					
-					// Check if the tag is a post item, if so parse and add, if not just skip
+					// Check if the tag is a post item, if so parse and add item, if not just skip
 					if(name.equals(TAG_ITEM))
 					{
 						items.add(readItem(parser));
