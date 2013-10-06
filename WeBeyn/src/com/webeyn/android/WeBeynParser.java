@@ -6,11 +6,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import android.annotation.SuppressLint;
 import android.util.Log;
 import android.util.Xml;
 
@@ -159,7 +159,6 @@ public class WeBeynParser
 	 * @throws XmlPullParserException
 	 * @throws IOException
 	 */
-	@SuppressLint("SimpleDateFormat")
 	private Item readItem(XmlPullParser parser) throws XmlPullParserException, IOException
 	{
 		// Require XML to contain tag of an item
@@ -205,7 +204,7 @@ public class WeBeynParser
 				String dateText = read(parser);
 				
 				// Create a formatter with necessary format
-				SimpleDateFormat formatter = new SimpleDateFormat(PUBLISH_DATE_FORMAT);
+				SimpleDateFormat formatter = new SimpleDateFormat(PUBLISH_DATE_FORMAT, new Locale("en"));
 				
 				// Parse the date and set
 				try
