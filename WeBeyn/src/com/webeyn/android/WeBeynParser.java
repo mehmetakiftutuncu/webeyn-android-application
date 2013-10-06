@@ -32,7 +32,7 @@ public class WeBeynParser
 	public static final String PUBLISH_DATE_FORMAT = "EEE, dd MMM yyyy HH:mm:ss Z";
 	
 	/** Tag for debugging */
-	private static final String DEBUG_TAG = "WeBeyn_Parser";
+	private static final String DEBUG_TAG = "WeBeynParser";
 
 	/**
 	 * Reads the XML from given input stream and parses it

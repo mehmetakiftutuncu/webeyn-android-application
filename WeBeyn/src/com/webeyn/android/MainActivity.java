@@ -2,8 +2,9 @@ package com.webeyn.android;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
+import android.widget.ListView;
+
 
 /**
  * Main activity of the application
@@ -19,19 +20,8 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		// Test start
-		try
-		{
-			for(Item i : new WeBeynFeedDownloaderAndParserTask().execute().get())
-			{
-				Log.d("WeBeyn", i.toString());
-			}
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		// Test end TODO: Delete
+		// Create a task and fill the list to test
+		new WeBeynFeedDownloaderAndParserTask(this, (ListView) findViewById(R.id.listView1)).execute();
 	}
 
 	@Override

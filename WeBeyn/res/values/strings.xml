@@ -3,5 +3,9 @@
 
     <string name="app_name">WeBeyn</string>
     <string name="action_settings">Settings</string>
+    
+    <string name="item_creator">Yazar: %1$s</string>
+    <string name="item_numberOfComments">%1$d Yorum</string>
+    <string name="item_separator">" | "</string>
 
 </resources>

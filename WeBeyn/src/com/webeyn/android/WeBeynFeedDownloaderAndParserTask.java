@@ -6,8 +6,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.ListView;
 
 /**
  * An {@link AsyncTask} to download and parse the RSS feed of WeBeyn
@@ -21,8 +23,26 @@ public class WeBeynFeedDownloaderAndParserTask extends AsyncTask<Void, Void, Arr
 	private static final String RSS_FEED_URL = "http://www.webeyn.com/feed";
 	
 	/** Tag for debugging */
-	private static final String DEBUG_TAG = "WeBeyn_ParserTask";
+	private static final String DEBUG_TAG = "WeBeynFeedDownloaderAndParserTask";
 	
+	/** {@link Context} of the {@link Activity} that has the {@link ListView} */
+	private Context mContext;
+	/** {@link ListView} in which the parsed {@link Items}s will be shown using a {@link WeBeynFeedAdapter} */
+	private ListView mListView;
+	
+	/**
+	 * Constructs a {@link WeBeynFeedDownloaderAndParserTask}
+	 * 
+	 * @param context {@link WeBeynFeedDownloaderAndParserTask#mContext}
+	 * @param listView {@link WeBeynFeedDownloaderAndParserTask#mListView}
+	 */
+	public WeBeynFeedDownloaderAndParserTask(Context context, ListView listView)
+	{
+		mContext = context;
+		mListView = listView;
+	}
+	
+	/* The task that will be done in the background thread */
 	@Override
 	protected ArrayList<Item> doInBackground(Void... params)
 	{
@@ -44,6 +64,16 @@ public class WeBeynFeedDownloaderAndParserTask extends AsyncTask<Void, Void, Arr
 			return null;
         }
     }
+	
+	/* This method will be called after the task is finished supplying the result as parameter */
+	@Override
+	protected void onPostExecute(ArrayList<Item> items)
+	{
+		super.onPostExecute(items);
+
+		// Set the list adapter with the resulting items
+		mListView.setAdapter(new WeBeynFeedAdapter(mContext, items));
+	}
 	
 	/**
 	 * Connects to internet and downloads the RSS feed
