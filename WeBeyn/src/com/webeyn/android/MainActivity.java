@@ -1,10 +1,13 @@
 package com.webeyn.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-
 
 /**
  * Main activity of the application
@@ -20,8 +23,24 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		// Get list view
+		ListView listView = (ListView) findViewById(R.id.listView1);
+		
+		listView.setOnItemClickListener(new OnItemClickListener()
+		{
+			@Override
+			public void onItemClick(AdapterView<?> adapter, View clickedView, int position, long id)
+			{
+				Item item = (Item) adapter.getItemAtPosition(position);
+				
+				Intent intent = new Intent(MainActivity.this, PostViewerActivity.class);
+				intent.putExtra(Constants.TAG_EXTRA_LINK, item.getLink());
+				startActivity(intent);
+			}
+		});
+		
 		// Create a task and fill the list to test
-		new WeBeynFeedDownloaderAndParserTask(this, (ListView) findViewById(R.id.listView1)).execute();
+		new WeBeynFeedDownloaderAndParserTask(this, listView).execute();
 	}
 
 	@Override

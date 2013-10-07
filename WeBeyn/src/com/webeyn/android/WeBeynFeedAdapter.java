@@ -6,10 +6,13 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -53,14 +56,14 @@ public class WeBeynFeedAdapter extends ArrayAdapter<Item>
 		public TextView title;
 		public TextView creator;
 		public TextView publishDate;
-		public TextView numberOfComments;
+		public Button numberOfComments;
 		public TextView summary;
 	}
 	
 	/* Defines how each item is generated and called every time that item is visible */
 	@SuppressLint("SimpleDateFormat")
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent)
+	public View getView(final int position, View convertView, ViewGroup parent)
 	{
 		/* Get the convert view that is given by the system first
 		 * to check if we can still use the existing resource. */
@@ -88,7 +91,7 @@ public class WeBeynFeedAdapter extends ArrayAdapter<Item>
 			holder.title = (TextView) itemRow.findViewById(R.id.textView_item_title);
 			holder.creator = (TextView) itemRow.findViewById(R.id.textView_item_creator);
 			holder.publishDate = (TextView) itemRow.findViewById(R.id.textView_item_publishDate);
-			holder.numberOfComments = (TextView) itemRow.findViewById(R.id.textView_item_numberOfComments);
+			holder.numberOfComments = (Button) itemRow.findViewById(R.id.button_item_numberOfComments);
 			holder.summary = (TextView) itemRow.findViewById(R.id.textView_item_summary);
 			
 			/* Set the defined view holder as the tag of this item's view object
@@ -105,6 +108,17 @@ public class WeBeynFeedAdapter extends ArrayAdapter<Item>
 		myHolder.publishDate.setText(new SimpleDateFormat(PUBLISH_DATE_FORMAT).format(mItems.get(position).getPublishDate()));
 		myHolder.numberOfComments.setText(mContext.getString(R.string.item_numberOfComments, mItems.get(position).getNumberOfComments()));
 		myHolder.summary.setText(mItems.get(position).getSummary());
+		
+		myHolder.numberOfComments.setOnClickListener(new OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent(mContext, PostViewerActivity.class);
+				intent.putExtra(Constants.TAG_EXTRA_LINK, mItems.get(position).getCommentsLink());
+				((Activity) mContext).startActivity(intent);
+			}
+		});
 		
 		// Return the view of current item all of whose information we just set
 		return itemRow;
