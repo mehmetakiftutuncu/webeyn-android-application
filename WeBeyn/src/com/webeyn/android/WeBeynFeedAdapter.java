@@ -7,12 +7,15 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -57,6 +60,7 @@ public class WeBeynFeedAdapter extends ArrayAdapter<Item>
 		public TextView creator;
 		public TextView publishDate;
 		public Button numberOfComments;
+		public ImageView image;
 		public TextView summary;
 	}
 	
@@ -92,6 +96,7 @@ public class WeBeynFeedAdapter extends ArrayAdapter<Item>
 			holder.creator = (TextView) itemRow.findViewById(R.id.textView_item_creator);
 			holder.publishDate = (TextView) itemRow.findViewById(R.id.textView_item_publishDate);
 			holder.numberOfComments = (Button) itemRow.findViewById(R.id.button_item_numberOfComments);
+			holder.image = (ImageView) itemRow.findViewById(R.id.imageView_item_image);
 			holder.summary = (TextView) itemRow.findViewById(R.id.textView_item_summary);
 			
 			/* Set the defined view holder as the tag of this item's view object
@@ -107,7 +112,10 @@ public class WeBeynFeedAdapter extends ArrayAdapter<Item>
 		myHolder.creator.setText(mContext.getString(R.string.item_creator, mItems.get(position).getCreator()));
 		myHolder.publishDate.setText(new SimpleDateFormat(PUBLISH_DATE_FORMAT).format(mItems.get(position).getPublishDate()));
 		myHolder.numberOfComments.setText(mContext.getString(R.string.item_numberOfComments, mItems.get(position).getNumberOfComments()));
-		myHolder.summary.setText(mItems.get(position).getSummary());
+		
+		//myHolder.summary.setText(mItems.get(position).getSummary());
+		Spanned html = Html.fromHtml(mItems.get(position).getSummary(), new URLImageParser(myHolder.image, mContext), null);
+		myHolder.summary.setText(html);
 		
 		myHolder.numberOfComments.setOnClickListener(new OnClickListener()
 		{
