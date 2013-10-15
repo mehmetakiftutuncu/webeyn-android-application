@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.webkit.WebView;
 
+import com.webeyn.android.utilities.NetworkUtilities;
 
 /**
  * Post viewer activity that will show the selected post
@@ -25,7 +26,12 @@ public class PostViewerActivity extends Activity
 		{
 			WebView webView = (WebView) findViewById(R.id.webView);
 			
-			webView.loadUrl(extras.getString(Constants.TAG_EXTRA_LINK));
+			// If network connection is available
+			if(NetworkUtilities.isNetworkAvailable(this))
+			{
+				// Load the web page for the selected post
+				webView.loadUrl(extras.getString(Constants.TAG_EXTRA_LINK));
+			}
 		}
 	}
 

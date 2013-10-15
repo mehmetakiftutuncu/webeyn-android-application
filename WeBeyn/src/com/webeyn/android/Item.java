@@ -3,6 +3,8 @@ package com.webeyn.android;
 import java.util.ArrayList;
 import java.util.Date;
 
+import android.graphics.Bitmap;
+
 /**
  * Represents a feed item which is a post on WeBeyn
  * 
@@ -37,6 +39,10 @@ public class Item
 	private String summary;
 	/** URL of the post */
 	private String link;
+	/** URL of the image in the post */
+	private String imageLink;
+	/** Image in the post */
+	private Bitmap image;
 	/** Date the post was publish */
 	private Date publishDate;
 	/** Creator of the post */
@@ -87,6 +93,22 @@ public class Item
 	}
 	
 	/**
+	 * @return {@link Item#imageLink}
+	 */
+	public String getImageLink()
+	{
+		return imageLink;
+	}
+	
+	/**
+	 * @return {@link Item#image}
+	 */
+	public Bitmap getImage()
+	{
+		return image;
+	}
+	
+	/**
 	 * @return {@link Item#publishDate}
 	 */
 	public Date getPublishDate()
@@ -133,6 +155,22 @@ public class Item
 	{
 		return link + COMMENTS_RSS_SUFFIX;
 	}
+	
+	/**
+	 * @return Tag to cache the image of this post, this tag will be used as the file name of the cached object
+	 */
+	public String getImageCacheTag()
+	{
+		return "" + getPublishDate().getTime() + "_image";
+	}
+	
+	/**
+	 * @return Tag to cache the data of this post, this tag will be used as the file name of the cached object
+	 */
+	public String getDataCacheTag()
+	{
+		return "" + getPublishDate().getTime() + "data";
+	}
 
 	/**
 	 * Sets the {@link Item#title}
@@ -147,7 +185,42 @@ public class Item
 	 */
 	public void setSummary(String summary)
 	{
-		this.summary = summary;
+		// TODO: Don't make things here elle elegan! ;)
+		
+		// Get the start point where the unnecessary HTML ends (reusing the variable)
+		int startPoint = summary.indexOf("</div>");
+		if(startPoint < 0)
+		{
+			// There seems to be no HTML, let's just take the given summary as it is
+			this.summary = summary;
+		}
+		else
+		{
+			// We have the starting point now, set the summary of this item starting from that point
+			this.summary = summary.substring(startPoint + 6); // + 6 is because </div> is 6 characters long (Very elle elegan as you can see :))
+		}
+		
+		/* We have our summary in any case.
+		 * If any problem occurs below with the image, there is no default action.
+		 * We just return. */
+		
+		// Get the start point of img tag src attribute (reusing the variable)
+		startPoint = summary.indexOf("src=\"");
+		if(startPoint < 0)
+		{
+			return;
+		}
+		startPoint += 5; // Since src=" is 5 characters long (Again elle elegan :))
+		
+		// Get the end point of img tag src attribute
+		int endPoint = summary.indexOf("\"", startPoint);
+		if(endPoint < 0)
+		{
+			return;
+		}
+		
+		// Extract image link and set it
+		setImageLink(summary.substring(startPoint, endPoint));
 	}
 	
 	/**
@@ -156,6 +229,22 @@ public class Item
 	public void setLink(String link)
 	{
 		this.link = link;
+	}
+	
+	/**
+	 * Sets the {@link Item#imageLink}
+	 */
+	private void setImageLink(String imageLink)
+	{
+		this.imageLink = imageLink;
+	}
+	
+	/**
+	 * Sets the {@link Item#image}
+	 */
+	public void setImage(Bitmap image)
+	{
+		this.image = image;
 	}
 	
 	/**
@@ -194,7 +283,7 @@ public class Item
 	@Override
 	public String toString()
 	{
-		return String.format("Item[\ntitle=%s\nsummary=%s\nlink=%s\npublishDate=%s\ncreator=%s\ncategories=%s\nnumberOfComments=%s\n]",
-						title, summary, link, publishDate, creator, categories, numberOfComments);
+		return String.format("Item[\ntitle=%s\nsummary=%s\nlink=%s\nimageLink=%s\npublishDate=%s\ncreator=%s\ncategories=%s\nnumberOfComments=%s\n]",
+						title, summary, link, imageLink, publishDate, creator, categories, numberOfComments);
 	}	
 }

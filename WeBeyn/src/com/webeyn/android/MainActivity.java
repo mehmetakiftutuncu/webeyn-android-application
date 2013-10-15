@@ -9,6 +9,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
+import com.webeyn.android.tasks.WeBeynFeedDownloaderAndParserTask;
+import com.webeyn.android.utilities.NetworkUtilities;
+
 /**
  * Main activity of the application
  * 
@@ -39,8 +42,12 @@ public class MainActivity extends Activity
 			}
 		});
 		
-		// Create a task and fill the list to test
-		new WeBeynFeedDownloaderAndParserTask(this, listView).execute();
+		// If network connection is available
+		if(NetworkUtilities.isNetworkAvailable(this))
+		{
+			// Create a task and fill the list to test
+			new WeBeynFeedDownloaderAndParserTask(this, listView).execute();
+		}
 	}
 
 	@Override

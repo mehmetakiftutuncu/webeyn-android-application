@@ -1,4 +1,4 @@
-package com.webeyn.android;
+package com.webeyn.android.utilities;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,6 +10,8 @@ import java.util.Locale;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+
+import com.webeyn.android.Item;
 
 import android.util.Log;
 import android.util.Xml;
@@ -32,7 +34,7 @@ public class WeBeynParser
 	public static final String PUBLISH_DATE_FORMAT = "EEE, dd MMM yyyy HH:mm:ss Z";
 	
 	/** Tag for debugging */
-	private static final String DEBUG_TAG = "WeBeynParser";
+	private static final String DEBUG_TAG = "WeBeyn_Parser";
 
 	/**
 	 * Reads the XML from given input stream and parses it

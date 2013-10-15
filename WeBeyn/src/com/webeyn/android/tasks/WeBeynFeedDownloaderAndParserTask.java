@@ -1,10 +1,14 @@
-package com.webeyn.android;
+package com.webeyn.android.tasks;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+
+import com.webeyn.android.Item;
+import com.webeyn.android.utilities.WeBeynFeedAdapter;
+import com.webeyn.android.utilities.WeBeynParser;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -23,7 +27,7 @@ public class WeBeynFeedDownloaderAndParserTask extends AsyncTask<Void, Void, Arr
 	private static final String RSS_FEED_URL = "http://www.webeyn.com/feed";
 	
 	/** Tag for debugging */
-	private static final String DEBUG_TAG = "WeBeynFeedDownloaderAndParserTask";
+	private static final String DEBUG_TAG = "WeBeyn_FeedDownloaderAndParserTask";
 	
 	/** {@link Context} of the {@link Activity} that has the {@link ListView} */
 	private Context mContext;

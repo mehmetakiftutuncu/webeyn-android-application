@@ -1,8 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/item_background_drop_shadow"
-    android:orientation="vertical"
     android:descendantFocusability="blocksDescendants" >
 
     <TextView
@@ -16,48 +17,52 @@
         android:id="@+id/textView_item_creator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textView_item_title"
         android:layout_marginLeft="@dimen/item_margin"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView_item_publishDate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/item_margin"
-        android:layout_marginTop="@dimen/item_margin" >
+        android:layout_below="@id/textView_item_creator"
+        android:layout_margin="@dimen/item_margin"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:id="@+id/textView_item_publishDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+        android:id="@+id/textView_item_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_item_creator"
+        android:layout_margin="@dimen/item_margin"
+        android:layout_toRightOf="@id/textView_item_publishDate"
+        android:text="@string/item_separator"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/item_separator"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+        android:id="@+id/textView_item_numberOfComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_item_creator"
+        android:layout_margin="@dimen/item_margin"
+        android:layout_toRightOf="@id/textView_item_separator"
+        android:background="#00FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <Button
-            android:id="@+id/button_item_numberOfComments"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    </LinearLayout>
-    
     <ImageView
         android:id="@+id/imageView_item_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/item_margin"
+        android:layout_below="@id/textView_item_publishDate"
         android:layout_marginTop="@dimen/item_margin"
-        android:scaleType="fitCenter" />
+        android:scaleType="centerInside" />
 
     <TextView
         android:id="@+id/textView_item_summary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/imageView_item_image"
         android:layout_margin="@dimen/item_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-</LinearLayout>
+</RelativeLayout>

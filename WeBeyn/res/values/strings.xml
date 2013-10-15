@@ -7,5 +7,7 @@
     <string name="item_creator">Yazar: %1$s</string>
     <string name="item_numberOfComments">%1$d Yorum</string>
     <string name="item_separator">" | "</string>
+    
+    <string name="network_error">İnternet bağlantısı yok!</string>
 
 </resources>
