@@ -1,10 +1,13 @@
 package com.webeyn.android;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebView;
 
+import com.webeyn.android.utilities.MenuHandler;
 import com.webeyn.android.utilities.NetworkUtilities;
 
 /**
@@ -15,6 +18,7 @@ import com.webeyn.android.utilities.NetworkUtilities;
  */
 public class PostViewerActivity extends Activity
 {
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -33,13 +37,26 @@ public class PostViewerActivity extends Activity
 				webView.loadUrl(extras.getString(Constants.TAG_EXTRA_LINK));
 			}
 		}
+		
+		// Enable home button and show it as up button
+		getActionBar().setHomeButtonEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.menu, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		// Handle the selection of any menu item
+		MenuHandler.handle(this, item);
+		
 		return true;
 	}
 }

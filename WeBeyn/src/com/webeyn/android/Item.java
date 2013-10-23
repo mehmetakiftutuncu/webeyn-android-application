@@ -167,9 +167,10 @@ public class Item
 	/**
 	 * @return Tag to cache the data of this post, this tag will be used as the file name of the cached object
 	 */
+	// TODO: Remove
 	public String getDataCacheTag()
 	{
-		return "" + getPublishDate().getTime() + "data";
+		return "" + getPublishDate().getTime() + "_data";
 	}
 
 	/**

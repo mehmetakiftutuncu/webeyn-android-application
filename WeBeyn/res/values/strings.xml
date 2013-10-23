@@ -9,5 +9,13 @@
     <string name="item_separator">" | "</string>
     
     <string name="network_error">İnternet bağlantısı yok!</string>
+    
+    <string name="menu_refresh">Yenile</string>
+    <string name="menu_website">WeBeyn\'e Git</string>
+    <string name="menu_rate">Oy Verin / Yorum Yapın</string>
+    <string name="menu_contact">Geliştiriciye Ulaşın</string>
+    <string name="menu_about">Uygulama Hakkında</string>
+    
+    <string name="contact_subject">WeBeyn Uygulaması Hakkında</string>
 
 </resources>
