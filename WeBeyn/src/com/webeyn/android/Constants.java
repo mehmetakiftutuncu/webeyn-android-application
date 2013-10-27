@@ -1,7 +1,5 @@
 package com.webeyn.android;
 
-import android.os.Environment;
-
 /**
  * Constant definitions
  * 
@@ -10,12 +8,6 @@ import android.os.Environment;
  */
 public class Constants
 {
-	/** URL of the post to view */
-	public static final String TAG_EXTRA_LINK = "com.webeyn.android.PostViewerActivity.link";
-	
-	/** Path to the caching directory */
-	public static final String CACHE_DIRECTORY = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.webeyn.android/cache/";
-	
 	/** URI for the market page of the application */
 	public static final String URI_MARKET_PAGE = "market://details?id=com.webeyn.android";
 	

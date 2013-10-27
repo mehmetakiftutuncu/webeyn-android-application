@@ -1,12 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/item_website"
-        android:icon="@drawable/ic_action_web_site"
-        android:showAsAction="ifRoom|withText"
-        android:title="@string/menu_website">
-    </item>
-    <item
         android:id="@+id/item_rate"
         android:icon="@drawable/ic_action_favorite"
         android:title="@string/menu_rate">

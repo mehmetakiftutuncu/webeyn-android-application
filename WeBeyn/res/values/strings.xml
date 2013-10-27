@@ -11,11 +11,17 @@
     <string name="network_error">İnternet bağlantısı yok!</string>
     
     <string name="menu_refresh">Yenile</string>
-    <string name="menu_website">WeBeyn\'e Git</string>
     <string name="menu_rate">Oy Verin / Yorum Yapın</string>
     <string name="menu_contact">Geliştiriciye Ulaşın</string>
     <string name="menu_about">Uygulama Hakkında</string>
     
-    <string name="contact_subject">WeBeyn Uygulaması Hakkında</string>
+    <string name="contact_subject">WeBeyn Android Uygulaması Hakkında</string>
+    
+    <string name="dialog_ok">Tamam</string>
+    <string name="aboutDialog_title">WeBeyn %1$s Hakkında</string>
+    <string name="aboutDialog_message">Buraya hakkında mesajı gelecek.</string>
+    
+    <string name="refresh_started">Yenileniyor&#8230;</string>
+    <string name="refresh_finished">Yenilendi!</string>
 
 </resources>
