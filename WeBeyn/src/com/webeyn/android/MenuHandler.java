@@ -1,12 +1,16 @@
 package com.webeyn.android;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.widget.Toast;
 
 /**
  * A utility class for handling menu actions
@@ -22,12 +26,36 @@ public class MenuHandler
 	 * @param context Context of the activity
 	 * @param item Menu item that is clicked
 	 */
+	@SuppressLint("NewApi")
+	@SuppressWarnings("deprecation")
 	public static void handle(Context context, MenuItem item)
 	{
 		switch(item.getItemId())
 		{
 			case android.R.id.home:
 				((MainActivity) context).loadWebeyn();
+				break;
+				
+			case R.id.item_copyLink:
+				WebView webView = ((MainActivity) context).getWebView();
+				if(webView != null)
+				{
+					String textToClip = webView.getTitle() + " " + webView.getUrl();
+					
+					if(Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB)
+					{
+						android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+						clipboard.setText(textToClip);
+					}
+					else
+					{
+						android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+						android.content.ClipData clip = android.content.ClipData.newPlainText("WeBeyn", textToClip);
+						clipboard.setPrimaryClip(clip);
+					}
+					
+					Toast.makeText(context, context.getString(R.string.linkCopied), Toast.LENGTH_SHORT).show();
+				}
 				break;
 				
 			case R.id.item_rate:

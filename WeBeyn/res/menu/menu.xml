@@ -1,5 +1,12 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:webeyn="http://schemas.android.com/apk/res-auto" >
 
+    <item
+        android:id="@+id/item_copyLink"
+        android:icon="@drawable/ic_action_copy"
+        android:title="@string/menu_copyLink"
+        webeyn:showAsAction="always">
+    </item>
     <item
         android:id="@+id/item_rate"
         android:icon="@drawable/ic_action_favorite"

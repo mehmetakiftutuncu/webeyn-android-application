@@ -244,4 +244,9 @@ public class MainActivity extends ActionBarActivity
 	{
 		return shouldShowSplash;
 	}
+	
+	public WebView getWebView()
+	{
+		return webView;
+	}
 }
