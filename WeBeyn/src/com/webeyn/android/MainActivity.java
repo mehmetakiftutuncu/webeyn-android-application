@@ -1,9 +1,13 @@
 package com.webeyn.android;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
@@ -82,19 +86,23 @@ public class MainActivity extends ActionBarActivity
 	{
 		if(item.getItemId() == refreshMenuItem.getItemId())
 		{
-			// Show toast to inform
-			Toast.makeText(this, getString(R.string.refresh_started), Toast.LENGTH_SHORT).show();
-			
-			// Create the progress bar
-			LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View v = inflater.inflate(R.layout.actionbar_progress, null);
-            MenuItemCompat.setActionView(item, v);
-            
-            // Set client as refresh button clicked
-            webClient.setRefreshClicked(true);
-            
-            // Refresh the page
-            webView.reload();
+			// If network connection is available
+			if(NetworkUtilities.isNetworkAvailable(this))
+			{
+				// Show toast to inform
+				Toast.makeText(this, getString(R.string.refresh_started), Toast.LENGTH_SHORT).show();
+				
+				// Create the progress bar
+				LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	            View v = inflater.inflate(R.layout.actionbar_progress, null);
+	            MenuItemCompat.setActionView(item, v);
+	            
+	            // Set client as refresh button clicked
+	            webClient.setRefreshClicked(true);
+	            
+	            // Refresh the page
+	            loadWebeyn();
+			}
 		}
 		else
 		{
@@ -105,6 +113,9 @@ public class MainActivity extends ActionBarActivity
 		return true;
 	}
 	
+	@SuppressLint("SetJavaScriptEnabled")
+	@TargetApi(Build.VERSION_CODES.FROYO)
+	@SuppressWarnings("deprecation")
 	private void initialize()
 	{
 		// Retrieve UI elements
@@ -116,7 +127,14 @@ public class MainActivity extends ActionBarActivity
 		{
 	    	// Create web view
 	    	webView = new WebView(this);
-	    	webView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+	    	if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.ECLAIR_MR1)
+	    	{
+	    		webView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT));
+	    	}
+	    	else
+	    	{
+	    		webView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+	    	}
 	    	
 	    	// Set the web client
 			webClient = new MyWebClient(this);
@@ -125,6 +143,7 @@ public class MainActivity extends ActionBarActivity
 			// Set options
 			webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
 			webView.setScrollbarFadingEnabled(true);
+			webView.getSettings().setJavaScriptEnabled(true);
 			
 			// Load
 			loadWebeyn();
@@ -185,9 +204,31 @@ public class MainActivity extends ActionBarActivity
 		// If network connection is available
 		if(NetworkUtilities.isNetworkAvailable(this))
 		{
+			// Show web view
+			webViewPlaceHolder.setVisibility(View.VISIBLE);
+			
 			// Load
 			webView.loadUrl(Constants.WEBSITE_URL);
 		}
+		else
+		{
+			// Hide web view so show error
+			webViewPlaceHolder.setVisibility(View.GONE);
+		}
+		
+		/* When page started loading hide splash after 3 seconds if it is still
+		 * visible (It took more than 3 seconds for page to load) */
+		new Handler(Looper.getMainLooper()).postDelayed(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				if(isShowingSplash())
+				{
+					hideSplash();
+				}
+			}
+		}, 3000);
 	}
 	
 	public void hideSplash()

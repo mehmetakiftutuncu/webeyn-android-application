@@ -8,8 +8,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.MenuItem;
 
-import com.webeyn.android.R;
-
 /**
  * A utility class for handling menu actions
  * 
@@ -73,7 +71,7 @@ public class MenuHandler
 		}
 		
 		dialogBuilder.setTitle(context.getString(R.string.aboutDialog_title, versionName));
-		dialogBuilder.setMessage(context.getString(R.string.aboutDialog_message));
+		dialogBuilder.setMessage(context.getResources().getText(R.string.aboutDialog_message));
 		dialogBuilder.setPositiveButton(context.getString(R.string.dialog_ok), new OnClickListener()
 		{
 			@Override

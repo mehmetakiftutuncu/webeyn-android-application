@@ -19,7 +19,7 @@
     
     <string name="dialog_ok">Tamam</string>
     <string name="aboutDialog_title">WeBeyn %1$s Hakkında</string>
-    <string name="aboutDialog_message">Buraya hakkında mesajı gelecek.</string>
+    <string name="aboutDialog_message"><b>\"Bilişim bizim doğamızda var\"</b> diyerek, <b>13 Ocak 2011</b> tarihinde yolculuğa başladık. Bilgisayar, internet ve teknoloji haberleri ile ilgili yayın yaptığımız web sitemizin ismi, \"Web\" ve \"Beyin\" kelimelerinin birleşmesiyle ortaya çıktı ve web\'in beyni oldu.\n\n13 Ocak 2011\'den bu yana aralıksız olarak yayın hayatımıza devam ettiğimiz web sitemizde, her gün düzenli ve güncel olarak en yeni gelişmeleri yayınlıyor, binlerce takipçimize ulaştırıyoruz.\n\nWeBeyn\'e webeyn<b>.com</b> dışında webeyn<b>.net</b> ve webeyn<b>.org</b> adreslerinden de ulaşabilirsiniz.\n\nGörüş, öneri, istek ya da basın bültenleriniz için İletişim bölümündeki form ve mail adresinden bize ulaşabilirsiniz.</string>
     
     <string name="refresh_started">Yenileniyor&#8230;</string>
     <string name="refresh_finished">Yenilendi!</string>
