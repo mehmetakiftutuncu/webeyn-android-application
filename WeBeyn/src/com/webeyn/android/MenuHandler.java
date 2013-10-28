@@ -37,24 +37,32 @@ public class MenuHandler
 				break;
 				
 			case R.id.item_copyLink:
-				WebView webView = ((MainActivity) context).getWebView();
-				if(webView != null)
+				// If network connection is available
+				if(NetworkUtilities.isNetworkAvailable(context))
 				{
-					String textToClip = webView.getTitle() + " " + webView.getUrl();
-					
-					if(Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB)
+					// Get the web view
+					WebView webView = ((MainActivity) context).getWebView();
+					if(webView != null)
 					{
-						android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-						clipboard.setText(textToClip);
+						// Generate text to copy
+						String textToClip = webView.getTitle() + " " + webView.getUrl();
+						
+						// Copy using proper API according to Android version
+						if(Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB)
+						{
+							android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+							clipboard.setText(textToClip);
+						}
+						else
+						{
+							android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+							android.content.ClipData clip = android.content.ClipData.newPlainText("WeBeyn", textToClip);
+							clipboard.setPrimaryClip(clip);
+						}
+						
+						// Notify
+						Toast.makeText(context, context.getString(R.string.linkCopied) + "\n\n" + textToClip, Toast.LENGTH_SHORT).show();
 					}
-					else
-					{
-						android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-						android.content.ClipData clip = android.content.ClipData.newPlainText("WeBeyn", textToClip);
-						clipboard.setPrimaryClip(clip);
-					}
-					
-					Toast.makeText(context, context.getString(R.string.linkCopied), Toast.LENGTH_SHORT).show();
 				}
 				break;
 				

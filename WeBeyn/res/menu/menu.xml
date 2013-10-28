@@ -5,7 +5,7 @@
         android:id="@+id/item_copyLink"
         android:icon="@drawable/ic_action_copy"
         android:title="@string/menu_copyLink"
-        webeyn:showAsAction="always">
+        webeyn:showAsAction="always|withText">
     </item>
     <item
         android:id="@+id/item_rate"
